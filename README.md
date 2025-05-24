@@ -20,8 +20,7 @@ Il progetto consiste in una libreria C++ che simula il funzionamento di una serr
 ## 🏗️ Struttura del progetto
 
 ```
-serra-intelligente/
-├── CMakeLists.txt          # File di configurazione CMake
+SerraIntelligente/
 ├── include/                # File header
 │   ├── Impianto.h          # Classe base Impianto
 │   ├── Serra.h             # Classe principale Serra
@@ -32,6 +31,7 @@ serra-intelligente/
 │   ├── Serra.cpp
 │   ├── Orario.cpp
 │   └── ...                 # Implementazioni specifiche
+├── CMakeLists.txt          # File di configurazione CMake
 ├── main.cpp                # Programma principale
 └── README.md               # Questo file
 ```
@@ -72,15 +72,9 @@ make
 | `reset timers`              | Rimuove tutti i timer                           |
 | `reset all`                 | Ripristina le condizioni iniziali               |
 
-## 📝 Logging
-
-Il sistema può registrare eventi su file di log con il seguente formato:
-```
-[HH:MM] Messaggio di evento
-```
-
 ## 👥 Autori
 
 - Alessandro Pigaiani [(AlePiga)](https://github.com/AlePiga)
 - Pietro Carlassara [(PietroCarlassara)](https://github.com/PietroCarlassara)
 - Marco Bedin [(Botbedi)](https://github.com/Botbedi)
+- Nicola Pulvino [(NicolaPulvino)](https://github.com/NicolaPulvino)
