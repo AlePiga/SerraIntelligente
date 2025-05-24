@@ -82,7 +82,7 @@ Il sistema può registrare eventi su file di log con il seguente formato:
 
 ## 👥 Autori
 
-- [Nome Autore 1](link-profilo)
+- [AlePiga](github.com/AlePiga)
 - [Nome Autore 2](link-profilo)
 
 ## 📄 Licenza
