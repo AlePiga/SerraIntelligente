@@ -72,7 +72,7 @@ make
 | `reset timers`              | Rimuove tutti i timer                           |
 | `reset all`                 | Ripristina le condizioni iniziali               |
 
-## 📝 Logging (opzionale)
+## 📝 Logging
 
 Il sistema può registrare eventi su file di log con il seguente formato:
 ```
