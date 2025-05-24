@@ -57,7 +57,7 @@ cmake ..
 make
 ```
 
-## 🎮 Comandi disponibili
+## 📑 Comandi disponibili
 
 | Comando                     | Descrizione                                      |
 |-----------------------------|-------------------------------------------------|
