@@ -2,7 +2,6 @@
 
 ![C++](https://img.shields.io/badge/C++-17-blue.svg)
 ![CMake](https://img.shields.io/badge/CMake-3.10+-green.svg)
-![License](https://img.shields.io/badge/License-MIT-orange.svg)
 
 Un sistema per la gestione intelligente di serre che monitora e controlla gli impianti di irrigazione per diverse tipologie di piante.
 
@@ -82,9 +81,6 @@ Il sistema può registrare eventi su file di log con il seguente formato:
 
 ## 👥 Autori
 
-- [AlePiga](github.com/AlePiga)
-- [Nome Autore 2](link-profilo)
-
-## 📄 Licenza
-
-Questo progetto è rilasciato sotto licenza MIT. Vedi il file [LICENSE](LICENSE) per maggiori dettagli.
+- Alessandro Pigaiani / [AlePiga](https://github.com/AlePiga)
+- Pietro Carlassara / [PietroCarlassara](https://github.com/PietroCarlassara)
+- Marco Bedin / [Botbedi](https://github.com/Botbedi)
