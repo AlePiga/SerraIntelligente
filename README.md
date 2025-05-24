@@ -81,6 +81,6 @@ Il sistema può registrare eventi su file di log con il seguente formato:
 
 ## 👥 Autori
 
-- Alessandro Pigaiani / [AlePiga](https://github.com/AlePiga)
-- Pietro Carlassara / [PietroCarlassara](https://github.com/PietroCarlassara)
-- Marco Bedin / [Botbedi](https://github.com/Botbedi)
+- Alessandro Pigaiani [(AlePiga)](https://github.com/AlePiga)
+- Pietro Carlassara [(PietroCarlassara)](https://github.com/PietroCarlassara)
+- Marco Bedin [(Botbedi)](https://github.com/Botbedi)
