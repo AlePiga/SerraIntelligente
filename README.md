@@ -21,19 +21,27 @@ Il progetto consiste in una libreria C++ che simula il funzionamento di una serr
 
 ```
 SerraIntelligente/
-├── include/                # File header
-│   ├── Impianto.h          # Classe base Impianto
-│   ├── Serra.h             # Classe principale Serra
-│   ├── Orario.h            # Gestione del tempo
-│   └── ...                 # Altre classi specifiche per tipologia
-├── src/                    # File sorgente
+├── include/
+│   ├── Impianto.h
+│   ├── Serra.h
+│   ├── Orario.h
+│   ├── ImpiantoAlpino.h
+│   ├── ImpiantoCarnivoro.h
+│   ├── ImpiantoDesertico.h
+│   ├── ImpiantoMediterraneo.h
+│   ├── ImpiantoTropicale.h
+├── src/
 │   ├── Impianto.cpp
 │   ├── Serra.cpp
 │   ├── Orario.cpp
-│   └── ...                 # Implementazioni specifiche
-├── CMakeLists.txt          # File di configurazione CMake
-├── main.cpp                # Programma principale
-└── README.md               # Questo file
+│   ├── ImpiantoAlpino.cpp
+│   ├── ImpiantoCarnivoro.cpp
+│   ├── ImpiantoDesertico.cpp
+│   ├── ImpiantoMediterraneo.cpp
+│   ├── ImpiantoTropicale.cpp
+├── CMakeLists.txt
+├── main.cpp
+└── README.md
 ```
 
 ## ⚙️ Requisiti
