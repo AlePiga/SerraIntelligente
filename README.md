@@ -53,14 +53,14 @@ SerraIntelligente/
 ## 🛠️ Installazione e compilazione
 
 ```bash
-# Clonare il repository
+# Clona il repository
 git clone https://github.com/AlePiga/SerraIntelligente.git
-cd serra-intelligente
+cd SerraIntelligente
 
-# Creare la build directory
+# Crea la build directory
 mkdir build && cd build
 
-# Configurare e compilare
+# Configura e compila
 cmake ..
 make
 ```
