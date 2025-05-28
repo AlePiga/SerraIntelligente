@@ -50,19 +50,11 @@ SerraIntelligente/
 - CMake 3.10+
 - Sistema operativo: Windows/Linux/macOS
 
-## 🛠️ Installazione e compilazione
+## 🛠️ Installazione
 
 ```bash
-# Clona il repository
 git clone https://github.com/AlePiga/SerraIntelligente.git
 cd SerraIntelligente
-
-# Crea la build directory
-mkdir build && cd build
-
-# Configura e compila
-cmake ..
-make
 ```
 
 ## 📑 Comandi disponibili
