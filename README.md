@@ -54,7 +54,7 @@ SerraIntelligente/
 
 ```bash
 # Clonare il repository
-git clone https://github.com/tuoutente/serra-intelligente.git
+git clone https://github.com/AlePiga/SerraIntelligente.git
 cd serra-intelligente
 
 # Creare la build directory
