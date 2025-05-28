@@ -161,17 +161,16 @@ void processCommand(const string &command, Serra &serra, const Orario &now) {
         }
     }
     else if (action == "help") {
-        cout << "set ${NOME} on\t\tAccende l'impianto manualmente\n";
-        cout << "set ${NOME} off\t\tSpegne l'impianto manualmente\n";
-        cout << "set ${NOME} ${START} ${STOP}\tImposta accensione/spegnimento automatico (lo stop solo per impianti manuali)\n";
-        cout << "set ${NOME} ${START}\tImposta accensione/spegnimento automatico\n";
-        cout << "rm ${NOME}\t\t\tRimuove un timer associato all'impianto\n";
+        cout << "set ${PLANTNAME} on\t\tAccende l'impianto manualmente\n";
+        cout << "set ${PLANTNAME} off\t\tSpegne l'impianto manualmente\n";
+        cout << "set ${PLANTNAME} ${START} ${STOP}\tImposta accensione/spegnimento automatico\n";
+        cout << "rm ${PLANTNAME}\t\t\tRimuove un timer associato all'impianto\n";
         cout << "show\t\t\t\tMostra tutti gli impianti con stato e consumo\n";
-        cout << "show ${NOME}\t\tMostra lo stato e i dettagli di un singolo impianto\n";
+        cout << "show ${PLANTNAME}\t\tMostra lo stato di un singolo impianto\n";
         cout << "set time ${TIME}\t\tImposta l'orario attuale del sistema\n";
-        cout << "reset time\t\t\tRipristina l'orario a 00:00 (impianti spenti, timer rimossi)\n";
-        cout << "reset timers\t\t\tRimuove tutti i timer mantenendo lo stato attuale degli impianti\n";
-        cout << "reset all\t\t\tRipristina le condizioni iniziali (orario, timer, impianti)\n";
+        cout << "reset time\t\t\tRipristina l'orario a 00:00\n";
+        cout << "reset timers\t\t\tRimuove tutti i timer\n";
+        cout << "reset all\t\t\tRipristina le condizioni iniziali\n";
     }
     else {
         throw invalid_argument("Errore: comando '" + action + "' non riconosciuto.");
