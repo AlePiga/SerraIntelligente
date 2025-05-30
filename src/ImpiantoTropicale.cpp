@@ -9,7 +9,7 @@ void ImpiantoTropicale::aggiorna(const Orario& orarioAttuale, const Orario& orar
     Orario orarioCorrente(orarioPrecedente);
 
     while (orarioCorrente < orarioAttuale) {
-        if  ((orarioCorrente.getOre() * 60 + orarioCorrente.getMinuti())%(int)(ATTIVAZIONE*60)==0){
+        if  ((orarioCorrente.getOre() * 60 + orarioCorrente.getMinuti())%(int)(ATTIVAZIONE*60) == 0){
             if (!attivo) {
                 attivo = true;
                 ultimaAttivazione = orarioCorrente;
@@ -27,6 +27,6 @@ void ImpiantoTropicale::aggiorna(const Orario& orarioAttuale, const Orario& orar
     }
 }
 
-std::string ImpiantoTropicale::getTipo() const {
+string ImpiantoTropicale::getTipo() const {
     return "Tropicale";
 }
