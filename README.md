@@ -71,6 +71,7 @@ cd SerraIntelligente
 | `reset time`                | Ripristina l'orario a 00:00                     |
 | `reset timers`              | Rimuove tutti i timer                           |
 | `reset all`                 | Ripristina le condizioni iniziali               |
+| `exit`                      | Esce dal programma               |
 
 ## 👥 Autori
 
