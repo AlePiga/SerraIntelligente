@@ -9,13 +9,13 @@ Un sistema per la gestione intelligente di serre che monitora e controlla gli im
 
 Il progetto consiste in una libreria C++ che simula il funzionamento di una serra intelligente con diversi tipi di impianti di irrigazione, ognuno con caratteristiche specifiche in base alla tipologia di pianta associata.
 
-## 🌱 Tipologie di impianti supportati
+## 🌱 Impianti supportati
 
 - **Tropicale**: Irrigazione automatica ogni 2.5 ore
-- **Desertica**: Irrigazione manuale
-- **Mediterranea**: Irrigazione adattiva basata sulla temperatura
-- **Alpina**: Irrigazione automatica ogni 1 ora
-- **Carnivora**: Irrigazione automatica ogni 1.5 ore
+- **Desertico**: Irrigazione manuale
+- **Mediterraneo**: Irrigazione adattiva basata sulla temperatura
+- **Alpino**: Irrigazione automatica ogni 1 ora
+- **Carnivoro**: Irrigazione automatica ogni 1.5 ore
 
 ## 🏗️ Struttura del progetto
 
