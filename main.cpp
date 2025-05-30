@@ -27,7 +27,8 @@ vector<string> splitString(const string& input, char delimiter) {
 
     return tokens;
 }
-void processCommand(const string &command, Serra &serra, const Orario &now);
+
+void processCommand(const string &command, Serra &serra, const Orario &now, bool &running);
 void logMessage(const Orario &time, const string &message, const int &errorLevel);
 vector<string> commandParser(const string &command);
 
@@ -41,14 +42,17 @@ int main() {
     cout << "/_______  /\\___  >__|   |__|  (____  / |__|___|  /__|  \\___  >____/____/__\\___  / \\___  >___|  /__|  \\___  >" << endl;
     cout << "        \\/     \\/                  \\/          \\/          \\/            /_____/      \\/     \\/          \\/ " << endl;
     cout << endl;
+
     Serra serra;
 
+    // Inizializzazione degli impianti
     serra.aggiungiImpianto(make_unique<ImpiantoTropicale>(1, "Tropicale"));
     serra.aggiungiImpianto(make_unique<ImpiantoDesertico>(2, "Desertico"));
     serra.aggiungiImpianto(make_unique<ImpiantoMediterraneo>(3, "Mediterraneo"));
     serra.aggiungiImpianto(make_unique<ImpiantoAlpino>(4, "Alpino"));
     serra.aggiungiImpianto(make_unique<ImpiantoCarnivoro>(5, "Carnivoro"));
 
+    // Impostazione timer iniziali
     serra.impostaTimer("Tropicale", Orario(0, 0));
     serra.impostaTimer("Alpino", Orario(0, 0));
     serra.impostaTimer("Carnivoro", Orario(0, 0));
@@ -64,7 +68,7 @@ int main() {
 
         try {
             Orario now = serra.getOrarioAttuale();
-            processCommand(input, serra, now);
+            processCommand(input, serra, now, running);
         }
         catch (const exception &e) {
             Orario now = serra.getOrarioAttuale();
@@ -72,11 +76,11 @@ int main() {
         }
     }
 
+    cout << "Uscita dal programma..." << endl;
     return 0;
 }
 
-void processCommand(const string &command, Serra &serra, const Orario &now) {
-    logMessage(now, "L'orario attuale è " + now.toString(),0);
+void processCommand(const string &command, Serra &serra, const Orario &now, bool &running) {
     vector<string> tokens = commandParser(command);
 
     if (tokens.empty()) {
@@ -94,7 +98,7 @@ void processCommand(const string &command, Serra &serra, const Orario &now) {
 
         if (deviceName == "time") {
             if (tokens.size() != 3) {
-                throw invalid_argument("Errore: formato per 'set timè non valido. Usa: set time HH:MM");
+                throw invalid_argument("Errore: formato per 'set time' non valido. Usa: set time HH:MM");
             }
 
             serra.impostaOrario(Orario(tokens[2]));
@@ -164,20 +168,24 @@ void processCommand(const string &command, Serra &serra, const Orario &now) {
         cout << "set ${PLANTNAME} on\t\tAccende l'impianto manualmente\n";
         cout << "set ${PLANTNAME} off\t\tSpegne l'impianto manualmente\n";
         cout << "set ${PLANTNAME} ${START} ${STOP}\tImposta accensione/spegnimento automatico\n";
-        cout << "rm ${PLANTNAME}\t\t\tRimuove un timer associato all'impianto\n";
+        cout << "rm ${PLANTNAME}\t\t\tReimuove un timer associato all'impianto\n";
         cout << "show\t\t\t\tMostra tutti gli impianti con stato e consumo\n";
         cout << "show ${PLANTNAME}\t\tMostra lo stato di un singolo impianto\n";
         cout << "set time ${TIME}\t\tImposta l'orario attuale del sistema\n";
         cout << "reset time\t\t\tRipristina l'orario a 00:00\n";
         cout << "reset timers\t\t\tRimuove tutti i timer\n";
         cout << "reset all\t\t\tRipristina le condizioni iniziali\n";
+        cout << "exit\t\t\t\tEsce dal programma\n";
+    }
+    else if (action == "exit") {
+        running = false;
     }
     else {
         throw invalid_argument("Errore: comando '" + action + "' non riconosciuto.");
     }
 }
 
-void logMessage(const Orario &time, const string &message, const int &errorLevel = 0) {
+void logMessage(const Orario &time, const string &message, const int &errorLevel) {
     if (errorLevel == 0) {
         cout << "[" << time.toString() << "]\t" << message << endl;
     }
