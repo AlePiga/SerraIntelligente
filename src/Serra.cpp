@@ -62,7 +62,7 @@ void Serra::spegniImpianto(const string& nome) {
     Impianto* impianto = trovaImpianto(nome);
     if (impianto) {
         impianto->spegni(orarioAttuale);
-        cout << "[" << orarioAttuale.toString() << "]" << nome << "spento" << endl;
+        cout << "[" << orarioAttuale.toString() << "] " << nome << " spento" << endl;
     }
 }
 
