@@ -1,6 +1,8 @@
 #include "../include/ImpiantoCarnivoro.h"
 #include <iostream>
 
+using namespace std;
+
 ImpiantoCarnivoro::ImpiantoCarnivoro(int id, const std::string& nome)
     : Impianto(id, nome) {}
 
@@ -9,7 +11,7 @@ void ImpiantoCarnivoro::aggiorna(const Orario& orarioAttuale, const Orario& orar
 
     while (orarioCorrente < orarioAttuale) {
 
-        if ((orarioCorrente.getOre() * 60 + orarioCorrente.getMinuti())%(int)(ATTIVAZIONE*60)==0) {
+        if ((orarioCorrente.getOre() * 60 + orarioCorrente.getMinuti())%(int)(ATTIVAZIONE*60) == 0) {
             if (!attivo) {
                 attivo = true;
                 ultimaAttivazione = orarioCorrente;
@@ -28,6 +30,6 @@ void ImpiantoCarnivoro::aggiorna(const Orario& orarioAttuale, const Orario& orar
     }
 }
 
-std::string ImpiantoCarnivoro::getTipo() const {
+string ImpiantoCarnivoro::getTipo() const {
     return "Carnivoro";
 }
