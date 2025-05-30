@@ -168,7 +168,7 @@ void processCommand(const string &command, Serra &serra, const Orario &now, bool
         cout << "set ${PLANTNAME} on\t\tAccende l'impianto manualmente\n";
         cout << "set ${PLANTNAME} off\t\tSpegne l'impianto manualmente\n";
         cout << "set ${PLANTNAME} ${START} ${STOP}\tImposta accensione/spegnimento automatico\n";
-        cout << "rm ${PLANTNAME}\t\t\tReimuove un timer associato all'impianto\n";
+        cout << "rm ${PLANTNAME}\t\t\tRimuove un timer associato all'impianto\n";
         cout << "show\t\t\t\tMostra tutti gli impianti con stato e consumo\n";
         cout << "show ${PLANTNAME}\t\tMostra lo stato di un singolo impianto\n";
         cout << "set time ${TIME}\t\tImposta l'orario attuale del sistema\n";
