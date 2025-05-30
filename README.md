@@ -57,7 +57,7 @@ git clone https://github.com/AlePiga/SerraIntelligente.git
 cd SerraIntelligente
 ```
 
-## 📑 Comandi disponibili
+## 📑 Comandi
 
 | Comando                     | Descrizione                                      |
 |-----------------------------|-------------------------------------------------|
