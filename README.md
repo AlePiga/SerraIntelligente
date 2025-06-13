@@ -75,7 +75,7 @@ cd SerraIntelligente
 
 ## 👥 Autori
 
-- @AlePiga
-- @PietroCarlassara
-- @Botbedi
-- @NicolaPulvino
+- Alessandro Pigaiani [@AlePiga](https://github.com/AlePiga)
+- Pietro Carlassara [@PietroCarlassara](https://github.com/PietroCarlassara)
+- Marco Bedin [@Botbedi](https://github.com/Botbedi)
+- Nicola Pulvino [@NicolaPulvino](https://github.com/NicolaPulvino)
